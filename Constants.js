@@ -1,0 +1,1 @@
+const constants = { GAME_WIDTH: 60 };
