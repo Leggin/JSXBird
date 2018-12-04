@@ -36,8 +36,6 @@ class Obstacle {
     }
 
     collision(bird) {
-        console.log(bird.x, bird.y, bird.width, this.x, this.top, this.bot, this.width);
-
         if (bird.x < this.x - bird.width / 2 || bird.x > this.x + this.width + bird.width / 2) {
             return false;
         }

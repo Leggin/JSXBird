@@ -12,6 +12,8 @@ class Game {
             this.restart();
         }], {});
         this.animationPoint = this.board.create('point', [-1, 1]);
+        this.score = 0;
+        var scoreText = this.board.create('text', [56, -1, () => { return String(this.score) }], { fontsize: 30 });
     }
 
     start() {
@@ -19,6 +21,7 @@ class Game {
     }
 
     restart() {
+        this.score = 0;
         this.bird.dead = false;
         this.bird.velocity = 0;
         this.bird.y = -1;
@@ -30,6 +33,8 @@ class Game {
 
     animate() {
 
+        //update score
+        this.score += 1;
         //update Bird
         this.bird.update();
 
@@ -51,7 +56,6 @@ class Game {
         //return something so the animation never stops!
         return [-1, 1];
     }
-
 }
 
 let g = new Game();
