@@ -9,7 +9,7 @@ class Bird {
         this.point = board.create('point', [() => { return this.x }, () => { return this.y }], { strokeColor: "#555555", fillColor: "#888888", withLabel: false, size: 7 });
 
         this.gravity = -0.078;
-        this.lift = 2;
+        this.lift = 1;
         this.velocity = 0;
 
         this.brain = new BrainNN(5, 4, 1);
