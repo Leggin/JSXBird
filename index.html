@@ -1,9 +1,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
     <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
 </head>
 
 <body>
+    <h1><a id="JSXBird_1"></a>JSXBird</h1>
+    <p>JSXBirdAI is a flappy bird clone implemented in the <a
+            href="https://jsxgraph.uni-bayreuth.de/wp/index.html">JSXGraph library</a>.</p>
     <div id="jxgbox" class="jxgbox" style="width:1200px; height:600px;"></div>
     <script src="Matrix.js"> </script>
     <script src="BrainNN.js"> </script>
@@ -15,5 +20,21 @@
     <script src="Game.js"> </script>
     <script src="UnitTests.js"> </script>
 
+
+
+    <h2><a id="Run_7"></a>Run</h2>
+    <p>To run the code use a http server tool like <a href="https://www.npmjs.com/package/http-server">http-server</a>
+        to serve the index.html.</p>
+    <p>Example using http-server:</p>
+    <pre><code class="language-sh">
+$ http-server .
+
+</code></pre>
+    <h2><a id="Usage_19"></a>Usage</h2>
+    <p>If the ball touches the rectangles, they lose.</p>
+    <p>The ball lifts upward each time the player hits the arrow up key,
+        if the key is not pressed, the ball falls because of gravity.</p>
+    <p>Every pxiel that the ball travels to the right is
+        one point in the highscore. Clicking “restart” will restart the game.</p>
 
 </body>
